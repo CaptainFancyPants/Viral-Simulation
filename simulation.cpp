@@ -19,6 +19,9 @@
 #include <emscripten.h>
 #include <math.h>
 
+#include "LockdownMovementStrategy.h"
+#include "RegularMovementStrategy.h"
+
 namespace corsim
 {
 
@@ -74,7 +77,12 @@ void Simulation::tick()
         }
     }
 
-    int numberInfected = 0;
+    
+    RegularMovementStrategy regularMovementStrategy;
+    int numberInfected = regularMovementStrategy.MoveSubjects(_subjects, dt);
+
+    // Gebruikt in RegularMovementStrategy
+    /*int numberInfected = 0;
 
     for(Subject& s : _subjects)
     {
@@ -85,7 +93,7 @@ void Simulation::tick()
         {
             numberInfected++;
         }
-    }
+    }*/
 
     if(counter % 30 == 0)
     {

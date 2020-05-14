@@ -5,10 +5,11 @@
 
 namespace corsim
 {
-    class RegularMovement: public MovementStrategyInterface
+    class RegularMovementStrategy : public MovementStrategyInterface
     {
         public:
-            int moveSubjects(std::vector<Subject> &subjects, int dt);
+            int MoveSubjects(std::vector<Subject> &subjects, int dt);
+
     };
 
 } 

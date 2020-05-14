@@ -1,13 +1,12 @@
 #pragma once
-
-#include "simulation.h"
 #include <vector>
+#include "subject.h"
 
-namespace corsim
-{
-    class MovementStrategyInterface
-    {
-        public:
-            virtual int moveSubjects(std::vector<Subject> &subjects, int dt) = 0;
-    };
-} 
+namespace corsim {
+	class MovementStrategyInterface {
+
+		public:
+			virtual int MoveSubjects(std::vector<Subject> &subjects, int dt) = 0;
+
+	};
+}
