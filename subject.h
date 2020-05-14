@@ -40,6 +40,8 @@ class Subject
         void infect();
         double angle();
         double speed();
+        // Kan de subject bewegen?
+        bool movable = true;
     private:
         double _x = 0,_y = 0, _dx = 0, _dy = 0;
         bool _infected = false;
