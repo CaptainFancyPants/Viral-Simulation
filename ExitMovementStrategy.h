@@ -6,6 +6,6 @@ namespace corsim {
 
     class ExitMovementStrategy : public MovementStrategyInterface {
     public:
-        int MoveSubjects(std::vector<Subject>& subjects, int dt);
+        int MoveSubjects(std::vector<Subject>& subjects, int dt, int counter);
     };
 }

@@ -49,7 +49,7 @@ void Simulation::run()
         emscripten_sleep(tick_speed);
     }
 }
-
+// Tijd
 int counter  = 0;
 
 void Simulation::tick()
@@ -88,7 +88,7 @@ void Simulation::tick()
 
     // Exit Movement Strategy B2
     ExitMovementStrategy exitMovementStrategy;
-    int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt);
+    int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt, counter);
 
 
 

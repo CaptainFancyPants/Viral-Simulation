@@ -3,7 +3,7 @@
 namespace corsim
 {
 
-    int ExitMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt)
+    int ExitMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt, int counter)
     {
         int numberInfected = 0;
 
@@ -13,6 +13,22 @@ namespace corsim
         for (int i = 0; i < amountImmovableSubjects; i++) {
             subjects[i].movable = false;
         }
+
+        if (counter > 10) {
+            for (int i = 0; i < 200; i++) {
+                if (subjects[i].movable == false) {
+                    subjects[i].movable = true;
+                }
+            }
+        }
+
+        /*while (counter != 10) {
+            for (int i = 0; i < 200; i++) {
+                if (subjects[i].movable == false) {
+                    subjects[i].movable = true;
+                }
+            }
+        }*/
 
         for (Subject& s : subjects) {
 

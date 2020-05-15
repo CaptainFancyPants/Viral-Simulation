@@ -6,7 +6,7 @@ namespace corsim {
 	class MovementStrategyInterface {
 
 		public:
-			virtual int MoveSubjects(std::vector<Subject> &subjects, int dt) = 0;
+			virtual int MoveSubjects(std::vector<Subject> &subjects, int dt, int counter) = 0;
 
 	};
 }
