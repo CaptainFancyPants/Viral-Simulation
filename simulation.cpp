@@ -18,9 +18,10 @@
 #include <iostream>
 #include <emscripten.h>
 #include <math.h>
-
+// Strategies
 #include "LockdownMovementStrategy.h"
 #include "RegularMovementStrategy.h"
+#include "ExitMovementStrategy.h"
 
 namespace corsim
 {
@@ -82,8 +83,12 @@ void Simulation::tick()
     int numberInfected = regularMovementStrategy.MoveSubjects(_subjects, dt);*/
 
     // Lockdown Movement Strategy
-    LockdownMovementStrategy lockdownMovementStrategy;
-    int numberInfected = lockdownMovementStrategy.MoveSubjects(_subjects, dt);
+    /*LockdownMovementStrategy lockdownMovementStrategy;
+    int numberInfected = lockdownMovementStrategy.MoveSubjects(_subjects, dt);*/
+
+    // Exit Movement Strategy B2
+    ExitMovementStrategy exitMovementStrategy;
+    int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt);
 
 
 
