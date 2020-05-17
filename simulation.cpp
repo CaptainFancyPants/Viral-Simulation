@@ -88,7 +88,7 @@ void Simulation::tick()
 
     // Exit Movement Strategy B2
     ExitMovementStrategy exitMovementStrategy;
-    int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt, counter);
+    int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt, counter / 30);
 
 
 
