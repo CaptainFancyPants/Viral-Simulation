@@ -7,9 +7,7 @@ namespace corsim
     {
         int numberInfected = 0;
         int amountWeeks = 5;
-        int amountToMoveAgain = 10;
         int futureWeeks = amountWeeks + 25;
-
         // (75%)
         int amountImmovableSubjects = 150;
 
@@ -20,9 +18,7 @@ namespace corsim
         if (amountWeeks < counter && counter > futureWeeks) {
 
             for (int i = 0; i < counter; i++) {
-
                 subjects[i].movable = true;
-                
             }  
         }
 

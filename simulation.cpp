@@ -90,22 +90,6 @@ void Simulation::tick()
     ExitMovementStrategy exitMovementStrategy;
     int numberInfected = exitMovementStrategy.MoveSubjects(_subjects, dt, counter / 30);
 
-
-
-    // Gebruikt in RegularMovementStrategy
-    /*int numberInfected = 0;
-
-    for(Subject& s : _subjects)
-    {
-        s.set_x(s.x() + s.dx() * dt);
-        s.set_y(s.y() + s.dy() * dt);
-
-        if(s.infected())
-        {
-            numberInfected++;
-        }
-    }*/
-
     if(counter % 30 == 0)
     {
         _sh.get()->communicate_number_infected(counter/30,numberInfected);
