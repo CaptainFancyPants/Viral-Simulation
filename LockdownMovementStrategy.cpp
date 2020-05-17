@@ -3,7 +3,7 @@
 namespace corsim
 {
 
-    int LockdownMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt)
+    int LockdownMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt, int counter)
     {
         int numberInfected = 0;
 

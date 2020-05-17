@@ -8,7 +8,7 @@ namespace corsim
     class RegularMovementStrategy : public MovementStrategyInterface
     {
         public:
-            int MoveSubjects(std::vector<Subject> &subjects, int dt);
+            int MoveSubjects(std::vector<Subject> &subjects, int dt, int counter);
 
     };
 

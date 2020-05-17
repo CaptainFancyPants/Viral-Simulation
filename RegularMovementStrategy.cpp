@@ -2,7 +2,7 @@
 
 namespace corsim {
 
-    int RegularMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt) {
+    int RegularMovementStrategy::MoveSubjects(std::vector<Subject>& subjects, int dt, int counter) {
 
         int numberInfected = 0;
 

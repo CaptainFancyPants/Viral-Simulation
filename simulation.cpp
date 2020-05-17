@@ -80,11 +80,11 @@ void Simulation::tick()
 
     // Regular Movement Strategy
     /*RegularMovementStrategy regularMovementStrategy;
-    int numberInfected = regularMovementStrategy.MoveSubjects(_subjects, dt);*/
+    int numberInfected = regularMovementStrategy.MoveSubjects(_subjects, dt, counter / 30);*/
 
     // Lockdown Movement Strategy
     /*LockdownMovementStrategy lockdownMovementStrategy;
-    int numberInfected = lockdownMovementStrategy.MoveSubjects(_subjects, dt);*/
+    int numberInfected = lockdownMovementStrategy.MoveSubjects(_subjects, dt, counter / 30);*/
 
     // Exit Movement Strategy B2
     ExitMovementStrategy exitMovementStrategy;
