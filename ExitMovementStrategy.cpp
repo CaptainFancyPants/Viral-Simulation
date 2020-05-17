@@ -7,8 +7,8 @@ namespace corsim
     {
         int numberInfected = 0;
         int amountWeeks = 5;
-        int amountToMoveAgain = 200;
-        int futureWeeks = amountWeeks += 5;
+        int amountToMoveAgain = 10;
+        int futureWeeks = amountWeeks + 25;
 
         // (75%)
         int amountImmovableSubjects = 150;
@@ -17,35 +17,28 @@ namespace corsim
             subjects[i].movable = false;
         }
 
+        if (amountWeeks < counter && counter > futureWeeks) {
 
-        if (counter < 3000) {
-
-            for (int i = 0; i < counter; i++) {
+            for (int i = 0; i < counter / 10; i++) {
 
                 if (subjects[i].movable == false) {
                     subjects[i].movable = true;
                 }
-
+                else {
+                    continue;
+                }
             }  
-
         }
+        /*else {
+            for (Subject& s : subjects) {
 
-        /*if (counter < 25) {
-
-            for (int i = 0; i < 200; i++) {
-
-                if (subjects[i].movable == false) {
-                    subjects[i].movable = true;
+                if (s.movable == true) {
+                    s.set_x(s.x() + s.dx() * dt);
+                    s.set_y(s.y() + s.dy() * dt);
                 }
 
-            }
-
-        }*/
-
-        /*while (counter != 10) {
-            for (int i = 0; i < 200; i++) {
-                if (subjects[i].movable == false) {
-                    subjects[i].movable = true;
+                if (s.infected()) {
+                    numberInfected++;
                 }
             }
         }*/
